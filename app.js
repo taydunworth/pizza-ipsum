@@ -5,7 +5,6 @@ const bodyParser = require('body-parser')
 const expressSession = require('express-session')
 const words = require('./phrases.js')
 const app = express()
-let word = words.words[Math.floor(Math.random() * words.words.length)]
 
 app.use(express.static('public'))
 app.use(bodyParser.json())
@@ -20,7 +19,9 @@ app.use(
 app.engine('mustache', mustacheExpress())
 
 app.get('/', function(req, res) {
-  res.send(word)
+  let word = words.words[Math.floor(Math.random() * words.words.length)]
+  console.log(word)
+  res.render('index.mustache', words)
 })
 
 app.listen(3000, function() {

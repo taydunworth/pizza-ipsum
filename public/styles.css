@@ -1,0 +1,8 @@
+header {
+  background-image: url('https://static.pexels.com/photos/280453/pexels-photo-280453.jpeg');
+  height: 500px;
+  background-attachment: fixed;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
