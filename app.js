@@ -24,6 +24,18 @@ app.get('/', function(req, res) {
   res.render('index.mustache', words)
 })
 
+app.post('/paragraph', function(req, res) {
+  const todoList = req.session.todoList || []
+  todoList.push({ id: todoList.length + 1, completed: false, listItem: req.body.listItem })
+  req.session.todoList = todoList
+  res.redirect('/')
+})
+
+app.post('/completedItems', (req, res) => {
+  res.redirect('/')
+})
+
+
 app.listen(3000, function() {
   console.log('Medium pineapple pizza extra cheese')
 })

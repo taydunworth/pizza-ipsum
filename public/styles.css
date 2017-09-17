@@ -1,8 +1,13 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 header {
   background-image: url('https://static.pexels.com/photos/280453/pexels-photo-280453.jpeg');
-  height: 500px;
+  height: 400px;
   background-attachment: fixed;
-  background-position: top right;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
 }

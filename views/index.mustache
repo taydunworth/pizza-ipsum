@@ -7,7 +7,13 @@
   </head>
   <body>
     <header>
-      {{ #words }} {{ . }} {{ /words }}
+      <h1>Pizza Ipsum</h1>
     </header>
+    <form class="paragraph" action="/paragraph" method="post">
+      <label for="par-num">How many paragraphs?</label>
+      <input type="text" name="par-num"></input>
+      <button type="submit" name="id" value="{{id}}">Click!</button>
+    </form>
+    {{ #words }} {{ word }} {{ /words }}
   </body>
 </html>
